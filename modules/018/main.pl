@@ -162,10 +162,6 @@ File::appendContent({
 	content 	=> \@conts,
 });
 
-# open my $trackerNewFh, '>', 'tracker_http.cc' or CliPrint::dieRed("could not open tracker_http.cc\n", 1);
-# print $trackerNewFh @conts;
-# close $trackerNewFh or CliPrint::dieRed("could not disengage tracker_http.cc\n", 1);
-
 my $chdirCommand3 = chdir('../..');
 if ( $chdirCommand3 == 0 ) {
 	CliPrint::dieRed("could not change working directory to libtorrent main. exiting...\n", 1);
