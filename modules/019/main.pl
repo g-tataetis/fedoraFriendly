@@ -2,16 +2,36 @@
 
 use warnings;
 use strict;
-use Term::ANSIColor;
 
-use lib '../library';
+use lib '../../library';
 use System;
+use CliPrint;
 
 System::call({
-	command 	=> "pwd",
-	delay 		=> 2,
-	errorMsg 	=> 'Holly crap!',
+	title	 	=> "Installing git",
+	command 	=> "sudo yum install git -y",
+	delay 		=> 3,
 	exitFail 	=> 1,
 });
+
+CliPrint::printGreen("Github username: ");
+chomp( my $username = <STDIN> );
+
+System::call({
+	command 	=> "git config --global user.name \"$username\"",
+	delay 		=> 3,
+	exitFail 	=> 1,
+});
+
+CliPrint::printGreen("Github email: ");
+chomp( my $email = <STDIN> );
+
+System::call({
+	command 	=> "git config --global user.email \"$email\"",
+	delay 		=> 3,
+	exitFail 	=> 1,
+});
+
+CliPrint::printGreen("Everything went fine... :)\n", 1);
 
 exit(0);
