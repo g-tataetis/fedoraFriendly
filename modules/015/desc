@@ -1,0 +1,2 @@
+title: Enable yum auto-updating
+desc: Enable yum autoupdating, by adding a crontab line to root crontab file
