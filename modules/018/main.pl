@@ -222,4 +222,28 @@ System::call({
 	errorMsg 	=> "could not go on installing rtorrent!",
 });
 
+System::call({
+	title 		=> "installing configuration file to your home folder...",
+	command 	=> "cp -f doc/rtorrent.rc ~/.rtorrent.rc",
+	delay 		=> 3,
+	exitFail 	=> 1,
+	errorMsg 	=> "could not go on installing configuration file!",
+});
+
+chdir("..");
+
+System::call({
+	title 		=> "removing libtorrent folder...",
+	command 	=> "rm -rf $libtorrentFolder",
+	delay 		=> 3,
+	exitFail 	=> 1,
+});
+
+System::call({
+	title 		=> "removing rtorrent folder...",
+	command 	=> "rm -rf $rtorrentFolder",
+	delay 		=> 3,
+	exitFail 	=> 1,
+});
+
 exit(0);

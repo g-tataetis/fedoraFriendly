@@ -38,7 +38,7 @@ System::call({
 
 System::call({
 	title 		=> 'Removing rpm file...',
-	command 	=> "rm -vf skype-*.rpm",
+	command 	=> "rm -f skype-*.rpm",
 	delay 		=> 3,
 	exitFail 	=> 1,
 });
