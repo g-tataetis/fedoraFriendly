@@ -15,7 +15,6 @@ contact: g.tataetis@gmail.com
 pgp key:
 
 ```
-
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1
 
@@ -68,5 +67,4 @@ qQ+PycXb+lLFO8HpCgSHYolPsGSFkYx3VzB3y5uvvOeJq9ychyNG23/ujXyqSmMS
 ydf0x2MBx19Dow==
 =71Ke
 -----END PGP PUBLIC KEY BLOCK-----
-
 ```
